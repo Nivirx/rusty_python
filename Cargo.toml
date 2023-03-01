@@ -1,0 +1,17 @@
+[package]
+name = "rusty_python"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+name = "rusty_python"
+crate-type = ["cdylib", "rlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clib = "0.2.1"
+memmap2 = "0.3.1"
+blake3 = { version = "1.0.0", features = ["rayon"] }
+pyo3 = { version = "0.14.2", features = ["extension-module"] }
+
